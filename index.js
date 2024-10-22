@@ -2,7 +2,7 @@
 
 import inquirer from "inquirer";
 import fs from "fs";
-import generateMarkdown from "./utils/generateMarkdown";
+import generateMarkdown from "./utils/generateMarkdown.js";
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -19,11 +19,11 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(`${fileName}`, data, (err) => {err ? console.error(err) : console.log(`README created!`)});
+    fs.writeFile(`${fileName}`, data, (err) => {err ? console.error(err) : console.log(`\nREADME created!`)});
 };
 
 // TODO: Create a function to initialize app
-function init() {
+function init(questions) {
     inquirer
         .prompt([
             {
@@ -40,7 +40,16 @@ function init() {
                 type: 'list',
                 name: 'license',
                 message: `${questions[2]}`,
-                choices: [],
+                choices: [
+                    'GNU AGPLv3',
+                    'GNU GPLv3',
+                    'GNU LGPLv3',
+                    'Mozilla Public License 2.0',
+                    'Apache License 2.0',
+                    'MIT License',
+                    'Boost Software License 1.0',
+                    'The Unlicense'
+                ],
             },
             {
                 type: 'input',
@@ -75,9 +84,9 @@ function init() {
         ])
         .then((data) => {
             const markdownContent = generateMarkdown(data);
-            writeToFile(`markdownFileName`, markdownContent);
+            writeToFile(`markdownTest.md`, markdownContent);
         });
 };
 
 // Function call to initialize app
-init();
+init(questions);
