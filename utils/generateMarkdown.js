@@ -3,7 +3,9 @@
 function renderLicenseBadge(license) {
   let licenseBadge;
 
-  if(license === 'Apache 2.0 License'){licenseBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'}
+  if(license === 'No License'){licenseBadge = ''}
+  
+  else if(license === 'Apache License 2.0'){licenseBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'}
 
   else if(license === 'GNU AGPLv3'){licenseBadge = '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)'}
 
@@ -24,15 +26,32 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  let licenseLink;
+
+  if(license !== 'No License'){licenseLink = '- [License](#license)'}
+  else{licenseLink = ''};
+
+  return licenseLink
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  let licenseSection;
+
+  if(license !== 'No License'){licenseSection = `## License\n\n${license}`}
+
+  else{licenseSection = ''};
+
+  return licenseSection
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
+  const licenseLink = renderLicenseLink(data.license);
+  const licenseSection = renderLicenseSection(data.license);
 
   return `# ${data.title}
 ${licenseBadge}
@@ -48,7 +67,7 @@ ${data.description}
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-- [License](#license)
+${licenseLink}
 
 ## Installation
 
@@ -72,11 +91,7 @@ https://github.com/${data.gitHubQuestions}
 
 ${data.emailQuestions}
 
-## License
-
-${data.license}
-
-`;
-}
+${licenseSection}`;
+};
 
 export default generateMarkdown;

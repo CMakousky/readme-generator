@@ -41,13 +41,14 @@ function init(questions) {
                 name: 'license',
                 message: `${questions[2]}`,
                 choices: [
+                    'No License',
+                    'Apache License 2.0',
+                    'Boost Software License 1.0',
                     'GNU AGPLv3',
                     'GNU GPLv3',
                     'GNU LGPLv3',
-                    'Mozilla Public License 2.0',
-                    'Apache License 2.0',
                     'MIT License',
-                    'Boost Software License 1.0',
+                    'Mozilla Public License 2.0',
                     'The Unlicense'
                 ],
             },
@@ -84,7 +85,7 @@ function init(questions) {
         ])
         .then((data) => {
             const markdownContent = generateMarkdown(data);
-            writeToFile(`markdownTest.md`, markdownContent);
+            writeToFile(`test-README.md`, markdownContent);
         });
 };
 
