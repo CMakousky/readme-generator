@@ -3,5 +3,4 @@ node_modules/
 package-lock.json
 template-README.md
 test-README.md
-markdownTest.md
-testLicense.txt
+test-LICENSE.txt
