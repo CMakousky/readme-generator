@@ -3,7 +3,7 @@
 
 ## Description
 
-Create a professional README markdown file through a command line interface.
+Create a professional README markdown file through a command line interface. This README.md was created with the "readme-generator" app.
 
 ## Table of Contents
 
