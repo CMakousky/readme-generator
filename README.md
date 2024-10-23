@@ -20,7 +20,7 @@ This app requires the inquirer package. Download a copy of the readme-generator 
 
 ## Usage
 
-Run the readme-generator app through the command line using node.js. Type the command "node index.js" into the command line, and then follow the prompts to generate a README file for your project.
+Run the readme-generator app through the command line using node.js. Type the command "node index.js" into the command line, and then follow the prompts to generate a README file for your project. Follow the link below for a quick demo of the readme-generator in use.
 
 https://drive.google.com/file/d/14bl-jKhGk8Pv6snj6LchB3VSpuBhBo8w/view?usp=sharing
 
