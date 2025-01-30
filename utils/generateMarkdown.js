@@ -60,6 +60,8 @@ ${licenseBadge}
 
 ${data.description}
 
+![plot]()
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -76,6 +78,8 @@ ${data.installationInstructions}
 ## Usage
 
 ${data.usageInformation}
+
+[Video Demo]()
 
 ## Contributing
 

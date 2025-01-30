@@ -85,7 +85,7 @@ function init(questions) {
         ])
         .then((data) => {
             const markdownContent = generateMarkdown(data);
-            writeToFile(`test-README.md`, markdownContent);
+            writeToFile(`Output-README.md`, markdownContent);
         });
 };
 
