@@ -1,9 +1,9 @@
-# readme-generator
+# Readme-Generator-CM
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-Create a professional README markdown file through a command line interface. This README.md was created with the "readme-generator" app.
+Create a professional README markdown file through a command line interface. This README.md was created with the "Readme-Generator-CM" app.
 
 ## Table of Contents
 
